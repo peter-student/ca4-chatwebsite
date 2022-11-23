@@ -1,0 +1,105 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  main {
+    padding: 30px;
+  }
+  
+  /* Navigation Bar CSS */
+
+  header {
+    padding-left: 30px;
+    padding-right: 30px;
+
+    background-color: aliceblue;
+
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+
+    align-items: flex-start;
+  }
+
+  #chatheader {
+    padding-left: 220px;
+  }
+
+  #profilepic {
+    border-radius: 50%;
+    margin-right: 4px;
+    margin-top: 15px;
+  }
+
+  #NavigationUnorderedLinks {
+    display: flex;
+    flex-flow: nowrap;
+    padding: 0;
+  }
+
+  .NavigationLink {
+    padding: 10px;
+
+    margin-left: 2px;
+    margin-right: 2px;
+
+    border: lightblue;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 7px;
+
+    list-style-type: none;
+    text-align: center;
+
+    background-color: white;
+
+    display:flex;
+  }
+
+  /* Style the side navigation */
+  .sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+  }
+
+  /*make the active user text inherit style from container*/
+
+  .inbox__people{
+      color: white;
+      padding: 16px;
+  }
+  
+  
+  /* Side navigation links */
+  .sidenav a {
+    color: white;
+    padding: 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+
+  
+  /* Change color on hover */
+  .sidenav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Style the content */
+  .content {
+    margin-left: 200px;
+    padding-left: 20px;
+  }
