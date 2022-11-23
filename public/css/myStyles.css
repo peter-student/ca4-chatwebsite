@@ -9,9 +9,16 @@
   }
 
   main {
-    padding: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
   }
-  
+
+  img {
+    height:auto;
+    max-width:100%;
+  }
+
   /* Navigation Bar CSS */
 
   header {
@@ -37,10 +44,22 @@
     margin-top: 15px;
   }
 
+/* The below code for the spinning animation is taken from http://jsfiddle.net/Ugc5g/1906/ */
+  #profilepic:hover {
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+  }
+  @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+  @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+  @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+/* End of spinning animation code */
+
   #NavigationUnorderedLinks {
     display: flex;
     flex-flow: nowrap;
     padding: 0;
+    margin-left: 4px;
   }
 
   .NavigationLink {
@@ -61,6 +80,27 @@
 
     display:flex;
   }
+
+  /* End of Navigation Bar CSS */
+
+
+
+  /* Intro Page CSS */
+
+  #intropara {
+    display: flex;
+    flex-flow: nowrap;
+    justify-content: space-between;
+  }
+
+  #introtextcontainer {
+    max-width: 50%;
+  }
+
+
+
+  /* End of Intro Page CSS */
+
 
   /* Style the side navigation */
   .sidenav {
