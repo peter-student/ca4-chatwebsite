@@ -21,6 +21,23 @@
 
   /* Navigation Bar CSS */
 
+  /* Skip to main content code taken from https://www.w3schools.com/accessibility/accessibility_skip_links.php */
+  .skip {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+
+  .skip:focus {
+    position: static;
+    width: auto;
+    height: auto;
+  }
+  /* End of skip to main content code */
+
   header {
     padding-left: 30px;
     padding-right: 30px;
