@@ -93,7 +93,7 @@
 
   /* Intro Page CSS */
 
-  #intropara {
+/*  #intropara {
     display: flex;
     flex-flow: nowrap;
     justify-content: space-between;
@@ -103,9 +103,16 @@
     max-width: 50%;
   }
 
-
-
+*/
   /* End of Intro Page CSS */
+
+  #informationtextcontainer {
+    display: flex;
+  }
+
+  .informationtext {
+    flex-grow: 1;
+  }
 
 
   /* Style the side navigation */
@@ -147,9 +154,14 @@
   /* Style the content */
   .content {
     margin-left: 200px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     padding-left: 20px;
     padding-right: 20px;
 
+
+    /* make space for input and message button at bottom of page */
+    margin-bottom: 50px;
   }
 
 
