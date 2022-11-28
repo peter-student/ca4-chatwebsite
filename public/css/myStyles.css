@@ -201,3 +201,47 @@
   .time_date {
     font-weight: bold;
   }
+
+  /* Style for input and message button, inspire by https://github.com/socketio/chat-example/blob/master/index.html */
+
+  .message_form {
+    /* box position */
+    position: fixed;
+    bottom: 0px;
+    left: 200px;
+    right: 0px;
+    /* box sixe */
+    display: flex;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 50px;
+    /* box decoration */
+    background-color: cadetblue;
+  }
+
+  .message_form__input {
+    border-width: 2px;
+    border-radius: 7px;
+    border-color: grey;
+
+    padding: 15px;
+    flex-grow: 1;
+
+    margin: 5px;
+  }
+
+  .message_form__button {
+    border-width: 2px;
+    border-radius: 7px;
+    border-color: grey;
+    border-style: solid;
+
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 5px;
+
+    font-weight: bold;
+  }
+  
