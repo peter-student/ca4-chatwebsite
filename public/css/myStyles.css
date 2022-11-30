@@ -156,7 +156,11 @@
 
   .inbox__people{
       color: white;
-      padding: 16px;
+      /* Change padding to be more consistent */
+      padding-top: 30px;
+      padding-bottom: 16px;
+      padding-right: 16px;
+      padding-left: 30px;
   }
   
   
@@ -212,7 +216,7 @@
 
   .incoming__message {
     /* background colour of text box */
-    background-color: /*darkslateblue*/ #5d8aa8;
+    background-color: #5d8aa8;
     /* padding within the text box */
     padding-left: 10px;
     padding-right: 10px;
