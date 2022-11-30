@@ -78,10 +78,18 @@ socket.on("new user", function (data) {
       });
 });
 
+  socket.on("new user alert", function (userName) {
+    messageBox.innerHTML +=`<p>${userName} has joined the chat</p>`;
+  })
+
 //when a user leaves
 socket.on("user disconnected", function (userName) {
   document.querySelector(`.${userName}-userlist`).remove();
 });
+
+  socket.on("user leaves alert", function (userName) {
+    messageBox.innerHTML +=`<p>${userName} has left the chat</p>`
+  })
 
 
 const inputField = document.querySelector(".message_form__input");
