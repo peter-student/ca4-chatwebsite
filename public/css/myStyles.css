@@ -20,115 +20,107 @@
   }
 
   /* Navigation Bar CSS */
+    /* "Skip to main content code" taken from https://www.w3schools.com/accessibility/accessibility_skip_links.php */
+      .skip {
+        position: absolute;
+        left: -10000px;
+        top: auto;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+      }
 
-  /* Skip to main content code taken from https://www.w3schools.com/accessibility/accessibility_skip_links.php */
-  .skip {
-    position: absolute;
-    left: -10000px;
-    top: auto;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-  }
+      .skip:focus {
+        position: static;
+        width: auto;
+        height: auto;
+      }
+    /* End of skip to main content code */
 
-  .skip:focus {
-    position: static;
-    width: auto;
-    height: auto;
-  }
-  /* End of skip to main content code */
+    header {
+      padding-left: 30px;
+      padding-right: 30px;
 
-  header {
-    padding-left: 30px;
-    padding-right: 30px;
+      background-color: aliceblue;
 
-    background-color: aliceblue;
+      display: flex;
+      flex-flow: wrap;
+      justify-content: center;
 
-    display: flex;
-    flex-flow: wrap;
-    justify-content: center;
+      align-items: flex-start;
+    }
 
-    align-items: flex-start;
-  }
+    #chatheader {
+      padding-left: 220px;
+    }
 
-  #chatheader {
-    padding-left: 220px;
-  }
+    #profilepic {
+      border-radius: 50%;
+      margin-right: 4px;
+      margin-top: 15px;
+    }
 
-  #profilepic {
-    border-radius: 50%;
-    margin-right: 4px;
-    margin-top: 15px;
-  }
+    #NavigationUnorderedLinks {
+      display: flex;
+      flex-flow: nowrap;
+      padding: 0;
+      margin-left: 4px;
+    }
 
-  #NavigationUnorderedLinks {
-    display: flex;
-    flex-flow: nowrap;
-    padding: 0;
-    margin-left: 4px;
-  }
+    .NavigationLink {
+      padding: 10px;
 
-  .NavigationLink {
-    padding: 10px;
+      margin-left: 2px;
+      margin-right: 2px;
 
-    margin-left: 2px;
-    margin-right: 2px;
+      border: lightblue;
+      border-style: solid;
+      border-width: 2px;
+      border-radius: 7px;
 
-    border: lightblue;
-    border-style: solid;
-    border-width: 2px;
-    border-radius: 7px;
+      list-style-type: none;
+      text-align: center;
 
-    list-style-type: none;
-    text-align: center;
+      background-color: white;
 
-    background-color: white;
-
-    display:flex;
-  }
-
+      display:flex;
+    }
   /* End of Navigation Bar CSS */
 
 
+  /* index.html specific CSS*/
+    /* #informationtextcontainer {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    } */
 
-  /* Intro Page CSS */
+    .informationtext {
+      /* flex-grow: 1;
+      flex-basis: 33%;
+      min-width: 33px; */
 
-/*  #intropara {
-    display: flex;
-    flex-flow: nowrap;
-    justify-content: space-between;
-  }
+      padding: 10px;
 
-  #introtextcontainer {
-    max-width: 50%;
-  }
+      margin-left: 2px;
+      margin-right: 2px;
 
-*/
-  /* End of Intro Page CSS */
+      border: lightblue;
+      border-style: solid;
+      border-width: 2px;
+      border-radius: 7px;
+    } 
 
-  #informationtextcontainer {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    flex-wrap: wrap;
-  }
+    .informationtextheader {
+      list-style: none;
+      text-decoration: underline;
 
-  .informationtext {
-    /* flex-grow: 1;
-    flex-basis: 33%;
-    min-width: 33px; */
+      text-align: center;
 
-    padding: 10px;
-
-    margin-left: 2px;
-    margin-right: 2px;
-
-    border: lightblue;
-    border-style: solid;
-    border-width: 2px;
-    border-radius: 7px;
-  } 
-
+      cursor: pointer;
+    }
+  /* End of index.html specific CSS*/
 
   /* Style the side navigation */
   .sidenav {
@@ -245,13 +237,15 @@
     padding-right: 10px;
     height: 50px;
     /* box decoration */
-    background-color: cadetblue;
+    background-color: powderblue;
   }
 
   .message_form__input {
     border-width: 2px;
     border-radius: 7px;
-    border-color: grey;
+    border-color: lightsteelblue;
+
+    box-shadow: none;
 
     padding: 15px;
     flex-grow: 1;
@@ -259,16 +253,30 @@
     margin: 5px;
   }
 
+  .message_form__input:focus {
+    /* https://stackoverflow.com/questions/5863774/help-removing-black-border-on-focus-of-input-button-in-ie */
+    outline: 0px;
+  }
+
+  /* https://stackoverflow.com/questions/9707021/how-do-i-auto-hide-placeholder-text-upon-focus-using-css-or-jquery */
+  input:focus::placeholder {
+    color: transparent;
+  }
+
   .message_form__button {
     border-width: 2px;
     border-radius: 7px;
-    border-color: grey;
+    border-color: lightsteelblue;
     border-style: solid;
+
+    background-color: white;
 
     padding-left: 10px;
     padding-right: 10px;
     margin: 5px;
 
     font-weight: bold;
+
+    cursor: pointer;
   }
   
