@@ -7,6 +7,7 @@ const inboxPeople = document.querySelector(".inbox__people");
 // Creation of string and script to generate a random animal emoji
 // Inspired and adapted from https://erikmartinjordan.com/get-random-emoji-javascript
 // Adjective and Noun arrays taken from https://gist.github.com/ijmacdowell/8325491
+// Was unsure how to import these from a seperate file (which would have made the code neater), so I have left them here.
 const getRandomAnimalEmoji = () => {
     const animalEmojis = ['🐵','🐒','🦍','🦧','🐶','🐕','🦮','🐕‍🦺','🐩','🐺','🦊','🦝','🐱','🐈','🐈‍⬛','🦁','🐯','🐅','🐆','🐴','🐎','🦄','🦓','🦌','🦬','🐮','🐂','🐃','🐄','🐷','🐖','🐗','🐽','🐏','🐑','🐐','🐪','🐫','🦙','🦒','🐘','🦣','🦏','🦛','🐭','🐁','🐀','🐹','🐰','🐇','🐿','🦫','🦔','🦇','🐻','🐻‍❄️','🐨','🐼','🦥','🦦','🦨','🦘','🦡','🐾','🦃','🐔','🐓','🐣','🐤','🐥','🐦','🐧','🕊','🦅','🦆','🦢','🦉','🦤','🪶','🦩','🦚','🦜','🐸','🐊','🐢','🦎','🐍','🐲','🐉','🦕','🦖','🐳','🐋','🐬','🦭','🐟','🐠','🐡','🦈','🐙','🐚','🐌','🦋','🐛','🐜','🐝','🪲','🐞','🦗','🪳','🕷','🕸','🦂','🦟','🪰','🪱','🦠']
     return animalEmojis[~~(Math.random() * animalEmojis.length)]
@@ -78,8 +79,9 @@ socket.on("new user", function (data) {
       });
 });
 
+  // Add an alert onto the website HTML when a user joins
   socket.on("new user alert", function (userName) {
-    messageBox.innerHTML +=`<p>${userName} has joined the chat</p>`;
+    messageBox.innerHTML +=`<div class="joinedchatcontainer"><p class="joinedchat"><b>${userName}</b> has joined the chat</p></div>`;
   })
 
 //when a user leaves
@@ -87,8 +89,9 @@ socket.on("user disconnected", function (userName) {
   document.querySelector(`.${userName}-userlist`).remove();
 });
 
+  // Add an alert onto the website HTML when a user joins
   socket.on("user leaves alert", function (userName) {
-    messageBox.innerHTML +=`<p>${userName} has left the chat</p>`
+    messageBox.innerHTML +=`<div class="leftchatcontainer"><p class="leftchat"><b>${userName}</b> has left the chat</p></div>`
   })
 
 

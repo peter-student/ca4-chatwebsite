@@ -236,12 +236,61 @@
 
   /* Style for content of chat messages */
   .message__author {
-    text-decoration: underline;
+    font-weight: bold;
   }
 
   .time_date {
-    font-weight: bold;
+    text-decoration: underline;
   }
+
+
+  /* Style for Alert Messages in Chat */
+  .joinedchatcontainer {
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+  }
+
+  .joinedchat {
+    /* background colour of text box */
+    background-color: lightgreen;
+    /* padding within the text box */
+    padding: 5px;
+    /* gap beneath the text box before next message */
+    margin-top: 0px;
+    margin-bottom: 5px;
+    /* visible border around text box */
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 7px;
+    border-color: green;
+    /* text position */
+    text-align: center;    
+  }
+  
+  .leftchatcontainer {
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+  }
+
+  .leftchat {
+    /* background colour of text box */
+    background-color: lightpink;
+    /* padding within the text box */
+    padding: 5px;
+    /* gap beneath the text box before next message */
+    margin-top: 0px;
+    margin-bottom: 5px;
+    /* visible border around text box */
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 7px;
+    border-color: red;
+    /* text position */
+    text-align: center;    
+  }
+  
 
   /* Style for input and message button, inspire by https://github.com/socketio/chat-example/blob/master/index.html */
 
