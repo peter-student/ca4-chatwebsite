@@ -24,23 +24,18 @@ const getRandomNoun = () => {
 }
 
 let userName = "";
-let id;
-// create variable for user emoji value
+// Declare Adjective, Noun, and Emoji Variables
 let userAdjective
 let userNoun
 let userAnimalEmoji
 const newUserConnected = function (data) {
     
-
-    //give the user a random unique id
-    id = Math.floor(Math.random() * 1000000);
-    // generate emoji value using above script
+    // Generate Adjective, Noun, and Emoji
     userAdjective = getRandomAdjective() ;
     userNoun = getRandomNoun() ;
     userAnimalEmoji = getRandomAnimalEmoji();
-    //  userName = 'user-' +id +'-' +userAnimalEmoji;
+    // Combine Values into a Username
     userName = userAdjective +'-' +userNoun +'-' +userAnimalEmoji;
-    //console.log(typeof(userName));   
     
 
     //emit an event with the user id
@@ -62,7 +57,7 @@ const addToUsersBox = function (userName) {
     //id is set to a string including the username
     const userBox = `
     <div class="chat_id ${userName}-userlist">
-      <h5>${userName}</h5>
+      <h5 class="usernameinsidebar">${userName}</h5>
     </div>
   `;
     //set the inboxPeople div with the value of userbox
@@ -79,21 +74,22 @@ socket.on("new user", function (data) {
       });
 });
 
-  // Add an alert onto the website HTML when a user joins
+  // Start of HTML New User Alert Code
   socket.on("new user alert", function (userName) {
     messageBox.innerHTML +=`<div class="joinedchatcontainer"><p class="joinedchat"><b>${userName}</b> has joined the chat</p></div>`;
   })
+  // End of HTML New User Alert Code
 
 //when a user leaves
 socket.on("user disconnected", function (userName) {
   document.querySelector(`.${userName}-userlist`).remove();
 });
 
-  // Add an alert onto the website HTML when a user joins
+  // Start of User Leaving Alert Code
   socket.on("user leaves alert", function (userName) {
-    messageBox.innerHTML +=`<div class="leftchatcontainer"><p class="leftchat"><b>${userName}</b> has left the chat</p></div>`
+    messageBox.innerHTML +=`<div class="leftchatcontainer"><p class="leftchat"><b>${userName}</b> has left the chat</p></div>`;
   })
-
+  // End of User Leaving Alert Code
 
 const inputField = document.querySelector(".message_form__input");
 const messageForm = document.querySelector(".message_form");

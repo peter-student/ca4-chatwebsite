@@ -26,18 +26,22 @@ io.on("connection", function (socket) {
     activeUsers.add(data);
     //... is the the spread operator, adds to the set while retaining what was in there already
     io.emit("new user", [...activeUsers]);
-    // new line
+    // Start of HTML New User Alert Code
     socket.broadcast.emit("new user alert", socket.userId);
+    // End of HTML New User Alert Code
   });
 
   socket.on("disconnect", function () {
       activeUsers.delete(socket.userId);
       io.emit("user disconnected", socket.userId);
+      // HTML User Leaving Alert Code
       socket.broadcast.emit("user leaves alert", socket.userId);
+      // End of User Leaving Alert Code
     });
 
     socket.on("chat message", function (data) {
       io.emit("chat message", data);
+      socket.broadcast.emit("new chat message", socket.userId);
   });
 
 });

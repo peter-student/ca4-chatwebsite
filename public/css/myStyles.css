@@ -25,7 +25,7 @@
     padding-top: 1px;
     padding-bottom: 1px;
 
-    background-color: #1d2951;
+    background-color: /* #1d2951 */ #111;
     color: white;
   }
   /* Navigation Bar CSS */
@@ -137,6 +137,7 @@
       display: block;
       margin-left: auto;
       margin-right: auto;
+      border-radius: 7px;
     }
   /* End of index.html specific CSS*/
 
@@ -156,14 +157,36 @@
 
   .inbox__people{
       color: white;
+      text-align: center;
       /* Change padding to be more consistent */
-      padding-top: 30px;
-      padding-bottom: 16px;
-      padding-right: 16px;
-      padding-left: 30px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      padding-right: 15px;
+      padding-left: 15px;
   }
   
-  
+  /* CSS Styles for Active User Names */
+  .usernameinsidebar {
+    padding: 5px;
+
+    margin-top: 0px;
+    margin-bottom: 15px;
+    margin-left: 2px;
+    margin-right: 2px;
+
+
+    border: lightblue;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 7px;
+
+    text-align: center;
+
+    background-color: black;
+  }
+
+
+
   /* Side navigation links */
   .sidenav a {
     color: white;
@@ -194,9 +217,40 @@
   }
 
 
+
   /* Chat Messages Style */
+  .incoming__message {
+    display: flex;
+    justify-content: flex-start;
+    margin: 0px;
+  }
+
+  .received__message {
+    /* background colour of text box */
+    background-color: #5d8aa8;
+    /* padding within the text box */
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    /* gap beneath the text box before next message */
+    margin-bottom: 5px;
+    /* visible border around text box */
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 7px;
+    border-color: #035096;
+    /* text position */
+    text-align: left;
+    color: white;
+  }  
 
   .outgoing__message {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0px;    
+  }
+
+  .sent__message {
     /* background colour of text box */
     background-color: aliceblue;
     /* padding within the text box */
@@ -214,26 +268,6 @@
     text-align: right;
   }
 
-  .incoming__message {
-    /* background colour of text box */
-    background-color: #5d8aa8;
-    /* padding within the text box */
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 10px;
-    /* gap beneath the text box before next message */
-    margin-bottom: 5px;
-    /* visible border around text box */
-    border-style: dashed;
-    border-width: 2px;
-    border-radius: 7px;
-    border-color: #035096;
-    /* text position */
-    text-align: left;
-    color: white;
-  }  
-
-
   /* Style for content of chat messages */
   .message__author {
     font-weight: bold;
@@ -242,7 +276,6 @@
   .time_date {
     text-decoration: underline;
   }
-
 
   /* Style for Alert Messages in Chat */
   .joinedchatcontainer {
@@ -257,10 +290,10 @@
     /* padding within the text box */
     padding: 5px;
     /* gap beneath the text box before next message */
-    margin-top: 0px;
-    margin-bottom: 5px;
+    margin-top: 5px;
+    margin-bottom: 10px;
     /* visible border around text box */
-    border-style: solid;
+    border-style: dashed;
     border-width: 2px;
     border-radius: 7px;
     border-color: green;
@@ -280,10 +313,10 @@
     /* padding within the text box */
     padding: 5px;
     /* gap beneath the text box before next message */
-    margin-top: 0px;
-    margin-bottom: 5px;
+    margin-top: 5px;
+    margin-bottom: 10px;
     /* visible border around text box */
-    border-style: solid;
+    border-style: dashed;
     border-width: 2px;
     border-radius: 7px;
     border-color: red;
