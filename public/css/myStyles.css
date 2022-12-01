@@ -1,4 +1,6 @@
-* {
+/* Global CSS */
+
+  * {
     box-sizing: border-box;
   }
   
@@ -24,12 +26,17 @@
     padding-right: 30px;
     padding-top: 1px;
     padding-bottom: 1px;
-
     background-color: /* #1d2951 */ #111;
     color: white;
   }
-  /* Navigation Bar CSS */
-    /* "Skip to main content code" taken from https://www.w3schools.com/accessibility/accessibility_skip_links.php */
+
+/* End of Global CSS */
+
+
+/* Navigation Bar CSS */
+    
+  /* "Skip to Main Content" CSS from https://www.w3schools.com/accessibility/accessibility_skip_links.php */
+      
       .skip {
         position: absolute;
         left: -10000px;
@@ -44,102 +51,91 @@
         width: auto;
         height: auto;
       }
-    /* End of skip to main content code */
 
-    header {
-      padding-left: 30px;
-      padding-right: 30px;
+  /* End of "Skip to Main Content" CSS */
 
-      background-color: aliceblue;
+  header {
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: aliceblue;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
 
-      display: flex;
-      flex-flow: wrap;
-      justify-content: center;
+  #chatheader {
+    padding-left: 220px;
+  }
 
-      align-items: flex-start;
-    }
+  #profilepic {
+    border-radius: 50%;
+    margin-right: 4px;
+    margin-top: 15px;
+  }
 
-    #chatheader {
-      padding-left: 220px;
-    }
+  #NavigationUnorderedLinks {
+    display: flex;
+    flex-flow: nowrap;
+    padding: 0;
+    margin-left: 4px;
+  }
 
-    #profilepic {
-      border-radius: 50%;
-      margin-right: 4px;
-      margin-top: 15px;
-    }
+  .NavigationLink {
+    padding: 10px;
+    margin-left: 2px;
+    margin-right: 2px;
+    border: lightblue;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 7px;
+    list-style-type: none;
+    text-align: center;
+    background-color: white;
+    display:flex;
+  }
 
-    #NavigationUnorderedLinks {
-      display: flex;
-      flex-flow: nowrap;
-      padding: 0;
-      margin-left: 4px;
-    }
-
-    .NavigationLink {
-      padding: 10px;
-
-      margin-left: 2px;
-      margin-right: 2px;
-
-      border: lightblue;
-      border-style: solid;
-      border-width: 2px;
-      border-radius: 7px;
-
-      list-style-type: none;
-      text-align: center;
-
-      background-color: white;
-
-      display:flex;
-    }
-  /* End of Navigation Bar CSS */
+/* End of Navigation Bar CSS */
 
 
-  /* index.html specific CSS*/
-    /* #informationtextcontainer {
-      display: flex;
-      justify-content: space-evenly;
-      align-items: flex-start;
-      flex-wrap: wrap;
-    } */
+/* Home Page CSS */
 
-    .informationtext {
-      /* flex-grow: 1;
-      flex-basis: 33%;
-      min-width: 33px; */
+  .informationtext {
+    padding: 10px;
+    margin-left: 2px;
+    margin-right: 2px;
+    border: lightblue;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 7px;
+  } 
 
-      padding: 10px;
+  .informationtextheader {
+    list-style: none;
+    text-decoration: underline;
+    text-align: center;
+  }
 
-      margin-left: 2px;
-      margin-right: 2px;
+  .pointertext {
+      cursor: pointer;
+  }
 
-      border: lightblue;
-      border-style: solid;
-      border-width: 2px;
-      border-radius: 7px;
-    } 
-
-    .informationtextheader {
-      list-style: none;
-      text-decoration: underline;
-
-      text-align: center;
-    }
-
-    .pointertext {
-        cursor: pointer;
-    }
+  /* Image Property CSS from https://www.w3schools.com/howto/howto_css_image_center.asp */
 
     #equalityslideimg, #techcrewimg, #standingphoto {
-      /* https://www.w3schools.com/howto/howto_css_image_center.asp */
       display: block;
       margin-left: auto;
       margin-right: auto;
+      /* Rounded corners CSS */
       border-radius: 7px;
     }
-  /* End of index.html specific CSS*/
+
+  /* End of Image Property CSS */
+
+/* End of Home Page CSS*/
+
+
+/* Provided Sample CSS (Modified) */
 
   /* Style the side navigation */
   .sidenav {
@@ -154,38 +150,29 @@
   }
 
   /*make the active user text inherit style from container*/
-
   .inbox__people{
       color: white;
       text-align: center;
-      /* Change padding to be more consistent */
-      padding-top: 15px;
-      padding-bottom: 15px;
-      padding-right: 15px;
-      padding-left: 15px;
+      padding: 15px;
   }
   
-  /* CSS Styles for Active User Names */
-  .usernameinsidebar {
-    padding: 5px;
+  /* Sidebar Username CSS */
 
-    margin-top: 0px;
-    margin-bottom: 15px;
-    margin-left: 2px;
-    margin-right: 2px;
+    .usernameinsidebar {
+      padding: 5px;
+      margin-top: 0px;
+      margin-bottom: 15px;
+      margin-left: 2px;
+      margin-right: 2px;
+      border: lightblue;
+      border-style: solid;
+      border-width: 2px;
+      border-radius: 7px;
+      text-align: center;
+      background-color: black;
+    }
 
-
-    border: lightblue;
-    border-style: solid;
-    border-width: 2px;
-    border-radius: 7px;
-
-    text-align: center;
-
-    background-color: black;
-  }
-
-
+  /* End of Sidebar Username CSS */
 
   /* Side navigation links */
   .sidenav a {
@@ -195,8 +182,6 @@
     display: block;
   }
 
-
-  
   /* Change color on hover */
   .sidenav a:hover {
     background-color: #ddd;
@@ -210,15 +195,15 @@
     padding-bottom: 20px;
     padding-left: 20px;
     padding-right: 20px;
-
-
-    /* make space for input and message button at bottom of page */
+    /* Adjust margin for input field and button CSS */
     margin-bottom: 50px;
   }
 
+/* End of Provided Sample CSS (Modified) */
 
 
-  /* Chat Messages Style */
+/* Chat Message and Alert CSS */
+
   .incoming__message {
     display: flex;
     justify-content: flex-start;
@@ -268,64 +253,72 @@
     text-align: right;
   }
 
-  /* Style for content of chat messages */
-  .message__author {
-    font-weight: bold;
-  }
-
-  .time_date {
-    text-decoration: underline;
-  }
-
-  /* Style for Alert Messages in Chat */
-  .joinedchatcontainer {
-    display: flex;
-    justify-content: center;
-    margin: 0px;
-  }
-
-  .joinedchat {
-    /* background colour of text box */
-    background-color: lightgreen;
-    /* padding within the text box */
-    padding: 5px;
-    /* gap beneath the text box before next message */
-    margin-top: 5px;
-    margin-bottom: 10px;
-    /* visible border around text box */
-    border-style: dashed;
-    border-width: 2px;
-    border-radius: 7px;
-    border-color: green;
-    /* text position */
-    text-align: center;    
-  }
+  /* Message Text CSS */
   
-  .leftchatcontainer {
-    display: flex;
-    justify-content: center;
-    margin: 0px;
-  }
+    .message__author {
+      font-weight: bold;
+    }
 
-  .leftchat {
-    /* background colour of text box */
-    background-color: lightpink;
-    /* padding within the text box */
-    padding: 5px;
-    /* gap beneath the text box before next message */
-    margin-top: 5px;
-    margin-bottom: 10px;
-    /* visible border around text box */
-    border-style: dashed;
-    border-width: 2px;
-    border-radius: 7px;
-    border-color: red;
-    /* text position */
-    text-align: center;    
-  }
+    .time_date {
+      text-decoration: underline;
+    }
+
+  /* End of Message Text CSS */
+
+  /* Chat Alert Messages CSS */
+
+    .joinedchatcontainer {
+      display: flex;
+      justify-content: center;
+      margin: 0px;
+    }
+
+    .joinedchat {
+      /* background colour of text box */
+      background-color: lightgreen;
+      /* padding within the text box */
+      padding: 5px;
+      /* gap beneath the text box before next message */
+      margin-top: 5px;
+      margin-bottom: 10px;
+      /* visible border around text box */
+      border-style: dashed;
+      border-width: 2px;
+      border-radius: 7px;
+      border-color: green;
+      /* text position */
+      text-align: center;    
+    }
+    
+    .leftchatcontainer {
+      display: flex;
+      justify-content: center;
+      margin: 0px;
+    }
+
+    .leftchat {
+      /* background colour of text box */
+      background-color: lightpink;
+      /* padding within the text box */
+      padding: 5px;
+      /* gap beneath the text box before next message */
+      margin-top: 5px;
+      margin-bottom: 10px;
+      /* visible border around text box */
+      border-style: dashed;
+      border-width: 2px;
+      border-radius: 7px;
+      border-color: red;
+      /* text position */
+      text-align: center;    
+    }
   
+  /* End of Chat Alert Messages CSS */
 
-  /* Style for input and message button, inspire by https://github.com/socketio/chat-example/blob/master/index.html */
+/* End of Chat Message and Alert CSS */
+
+
+/* Form Input and Message Button CSS, Inspired+Adapted from https://github.com/socketio/chat-example/blob/master/index.html */
 
   .message_form {
     /* box position */
@@ -348,39 +341,31 @@
     border-width: 2px;
     border-radius: 7px;
     border-color: lightsteelblue;
-
     box-shadow: none;
-
     padding: 15px;
     flex-grow: 1;
-
     margin: 5px;
   }
 
-  .message_form__input:focus {
-    /* https://stackoverflow.com/questions/5863774/help-removing-black-border-on-focus-of-input-button-in-ie */
-    outline: 0px;
-  }
+  /* Form Input Autohide Text CSS from https://stackoverflow.com/questions/9707021/how-do-i-auto-hide-placeholder-text-upon-focus-using-css-or-jquery */
 
-  /* https://stackoverflow.com/questions/9707021/how-do-i-auto-hide-placeholder-text-upon-focus-using-css-or-jquery */
-  input:focus::placeholder {
-    color: transparent;
-  }
+    input:focus::placeholder {
+      color: transparent;
+    }
+
+  /* End of Form Input Autohide Text CSS */
 
   .message_form__button {
     border-width: 2px;
     border-radius: 7px;
     border-color: lightsteelblue;
     border-style: solid;
-
     background-color: white;
-
     padding-left: 10px;
     padding-right: 10px;
     margin: 5px;
-
     font-weight: bold;
-
     cursor: pointer;
   }
   
+/* End of Form Input and Message Button CSS */
