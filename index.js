@@ -48,4 +48,13 @@ io.on("connection", function (socket) {
       socket.broadcast.emit("new chat message", socket.userId);
   });
 
+  // listener for 'typing' notification
+    socket.on("userTyping", function(data) {
+      socket.broadcast.emit("userTyping", data)
+  })
+
+
 });
+
+
+

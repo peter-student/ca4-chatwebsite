@@ -95,6 +95,22 @@ const inputField = document.querySelector(".message_form__input");
 const messageForm = document.querySelector(".message_form");
 const messageBox = document.querySelector(".messages__history");
 
+
+// add div for 'typing' message to go in
+const userTyping = document.querySelector(".user__typing")
+
+// tell index.js that someone is typing
+messageForm.addEventListener("keypress", function () {
+  socket.emit("userTyping", userName)
+});
+
+// tell other client someone is typing in the HTML
+socket.on("userTyping", function (data) {
+  userTyping.innerHTML = `<div class="typingcontainer"><p class="typing"><b> ${data} </b> is typing...</p></div>`;
+})
+
+
+
 const addNewMessage = ({ user, message }) => {
   const time = new Date();
   const formattedTime = time.toLocaleString("en-US", { hour: "numeric", minute: "numeric" });
@@ -140,4 +156,6 @@ messageForm.addEventListener("submit", (e) => {
 
 socket.on("chat message", function (data) {
   addNewMessage({ user: data.nick, message: data.message });
+  // make 'typing' message disappear
+  userTyping.innerHTML = ""
 });
