@@ -1,4 +1,4 @@
-# Website Report
+# Submission Report
 
 * Course ID: CS1031
 * Student ID: 52212820
