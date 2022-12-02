@@ -1,5 +1,0 @@
-https://stackoverflow.com/questions/47106985/use-same-navbar-for-multiple-html-files
-https://www.w3schools.com/css/css_border.asp
-https://css-tricks.com/snippets/css/a-guide-to-flexbox/
-https://www.ecosia.org/images?q=html%20borde%20rmargin%20padding#id=4D1BF4494CA70C1382EE6ED9AF6185907B611325
-https://www.w3schools.com/css/css3_borders.asp

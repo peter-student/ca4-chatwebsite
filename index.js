@@ -50,11 +50,8 @@ io.on("connection", function (socket) {
 
   // listener for 'typing' notification
     socket.on("userTyping", function(data) {
-      socket.broadcast.emit("userTyping", data)
-  })
+      socket.broadcast.emit("userTyping", data);
+  });
 
 
 });
-
-
-
