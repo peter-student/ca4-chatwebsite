@@ -22,11 +22,11 @@
   }
 
   footer {
-    padding-left: 30px;
-    padding-right: 30px;
     padding-top: 1px;
     padding-bottom: 1px;
-    background-color: /* #1d2951 */ #111;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: #111;
     color: white;
   }
 
@@ -335,7 +335,6 @@
       /* text position */
       text-align: center; 
       /* text style */
-      font-style: italic;
       color: rgb(27, 27, 27);
     }
   

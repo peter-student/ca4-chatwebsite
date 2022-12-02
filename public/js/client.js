@@ -76,7 +76,7 @@ socket.on("new user", function (data) {
 
   // Start of HTML New User Alert Code
   socket.on("new user alert", function (userName) {
-    messageBox.innerHTML +=`<div class="joinedchatcontainer"><p class="joinedchat"><b>${userName}</b> has joined the chat</p></div>`;
+    messageBox.innerHTML +=`<div class="joinedchatcontainer"><p class="joinedchat"><b>${userName}</b> joined the chat</p></div>`;
   })
   // End of HTML New User Alert Code
 
@@ -87,7 +87,7 @@ socket.on("user disconnected", function (userName) {
 
   // Start of User Leaving Alert Code
   socket.on("user leaves alert", function (userName) {
-    messageBox.innerHTML +=`<div class="leftchatcontainer"><p class="leftchat"><b>${userName}</b> has left the chat</p></div>`;
+    messageBox.innerHTML +=`<div class="leftchatcontainer"><p class="leftchat"><b>${userName}</b> left the chat</p></div>`;
   })
   // End of User Leaving Alert Code
 
@@ -106,7 +106,7 @@ messageForm.addEventListener("keypress", function () {
 
 // tell other client someone is typing in the HTML
 socket.on("userTyping", function (data) {
-  userTyping.innerHTML = `<div class="typingcontainer"><p class="typing"><b> ${data} </b> is typing...</p></div>`;
+  userTyping.innerHTML = `<div class="typingcontainer"><p class="typing"><i><b> ${data} </b> is typing...</i></p></div>`;
 })
 
 
